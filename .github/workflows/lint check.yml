@@ -1,0 +1,9 @@
+name: Lintcheck
+
+on: workflow_dispatch
+
+jobs:
+  codecheckout:
+  steps:
+    - name: codecheckout
+      uses: actions/checkout@v5
