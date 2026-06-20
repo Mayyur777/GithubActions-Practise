@@ -4,6 +4,7 @@ on: workflow_dispatch
 
 jobs:
   codecheckout:
-  steps:
+    runs-on: ubuntu-22.04
+    steps:
     - name: codecheckout
       uses: actions/checkout@v5
