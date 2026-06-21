@@ -1,24 +1,15 @@
-name: Lintcheck
+name: pylint
 
-on: workflow_dispatch
+on:
+  push:
+    branches: [main]
+    paths: "*.py"
 
 jobs:
-  codecheckout:
+    code:
     runs-on: ubuntu-22.04
     steps:
-    - name: codecheckout
-      uses: actions/checkout@v5
-      
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-          python-version: "3.11"
-
-    - name: Install Ruff
-      run: pip install ruff
-
-    - name: Run Ruff
-      run: ruff check .
-
-      # Step 3: Install linting tools
+      - name: Checkout code
+        uses: actions/checkout@v7
+        
   
