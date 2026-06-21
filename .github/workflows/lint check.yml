@@ -11,5 +11,11 @@ jobs:
       steps:
         - name: Checkout code
           uses: actions/checkout@v7
+
+        - name: Install Python linter
+          run: pip install ruff
+
+        - name: Run ruff
+          run: pip install ruff
         
   
